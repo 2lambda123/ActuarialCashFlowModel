@@ -61,6 +61,20 @@ def get_spread(file_name):
     
 
 def get_prices(file_name):
+    """Function: get_prices
+    Parameters:
+        - file_name (str): The name of the file containing credit data.
+    Returns:
+        - prix_marche (ndarray): A 7x30 array containing market prices for different credit ratings and time to maturity.
+        - coupon_marche (ndarray): A 7x30 array containing market coupon rates for different credit ratings and time to maturity.
+    Processing Logic:
+        - Reads credit data from a given file.
+        - Extracts prices and coupon rates for different credit ratings and time to maturity.
+        - Returns arrays containing market prices and coupon rates.
+    Example:
+        prix, coupon = get_prices('credit_data.xlsx')
+        print(prix[3, 10]) # Prints the market price for a credit rating of 3 and time to maturity of 11 years."""
+    
     wb = open_workbook(file_name)
     sheet = wb.sheet_by_name('Credit_Data')
     row_begin = 3

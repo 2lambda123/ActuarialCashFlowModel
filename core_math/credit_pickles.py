@@ -1,5 +1,4 @@
 ## Python packages
-from __future__ import division
 from xlrd import open_workbook
 import numpy as np
 import pickle
